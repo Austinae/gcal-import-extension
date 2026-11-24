@@ -1,39 +1,50 @@
 # GCal Quick Import
 
-Chrome extension (Manifest **V3**) that adds a small **Import events** panel on [Google Calendar](https://calendar.google.com). Drop an `.ics` file (or use **Choose file**) to import without going through **Settings → Import & export**.
+## Chrome Web Store
 
-## How it works
+The extension will be on the Chrome Web Store shortly.
 
-Google Calendar’s web app does not expose a stable public “upload ICS” HTTP API. The request you captured in `raw event.txt` is an internal `sync.sync` RPC with session-specific tokens and protobuf payloads.
+When the listing is live, install from here:
 
-This extension uses the **same user-facing path** as Settings → Import: it opens (or navigates to) `/r/settings/export`, attaches your file to Google’s file input in the page’s JavaScript world, optionally picks a calendar, and clicks **Import**. That flow triggers the same backend import (including `sync.sync`) with valid session state.
+[Chrome Web Store listing](https://chromewebstore.google.com/detail/TODO_REPLACE_WITH_LISTING_URL)
 
-## Install (unpacked)
+Import calendar files into [Google Calendar](https://calendar.google.com). You do not need to open Settings and Import & export.
 
-1. Open `chrome://extensions`
-2. Enable **Developer mode**
-3. Click **Load unpacked** and select this folder
-4. Open Google Calendar — you should see the panel at the bottom-right (above the footer)
+You may have an `.ics` file from a ticket site, a meeting invite, or a download. Drag the file onto your calendar view. You do not need to search menus.
 
-## Options
+## What you get
 
-Click the extension icon in the toolbar:
+- Drag a file anywhere on the calendar view. You can also use the Import events panel at the bottom-right.
+- Quick import sends the file through the same import flow that Google uses on the settings page.
+- Choose calendar first if you want to read the file and pick a calendar before import starts.
+- The extension uses your current Google login. You do not need another account or an API key.
 
-- **Quick mode** (default): imports in a background tab using the default calendar name (or the dropdown’s current selection if the name is empty)
-- **Pick mode**: navigates you to the Import settings page with the file pre-filled so you can choose the calendar and click **Import**
+## Getting started
 
-## Files
+1. Install the extension in Chrome. See Install from source below if you use this repo on your computer.
+2. Open [Google Calendar](https://calendar.google.com).
+3. Drag an `.ics` or `.csv` file onto the page. You can also click Choose file on the import panel.
 
-| File | Role |
-|------|------|
-| `manifest.json` | MV3 manifest |
-| `background.js` | Jobs, background tab, MAIN-world file attach |
-| `content.js` | Drop panel + `/settings/export` automation |
-| `content.css` | Panel and toast styles |
-| `popup.html` / `popup.js` | Extension options |
+You see a short message when import finishes. If import fails, you see an error message.
 
-## Permissions
+## Import modes
 
-- `https://calendar.google.com/*` — inject UI and drive the native import page
-- `storage` — save default calendar / mode
-- `scripting` — attach files in the page MAIN world (required for Google’s controls)
+Open the extension from the Chrome toolbar to set the mode.
+
+| Mode | Best for |
+|------|----------|
+| Import in the background | Daily use. Drop a file and keep working. You can set a default calendar name so events go to the right calendar. |
+| Open Import settings | You want the file on the Google Import page. You pick a calendar from the list and click Import. |
+
+## Privacy
+
+GCal Quick Import runs only on calendar.google.com. It uses your browser session to run the same import that Google offers in settings. The extension does not send your files or calendar data to another service.
+
+## Install from source
+
+For local testing or contributions:
+
+1. Open `chrome://extensions`.
+2. Turn on Developer mode.
+3. Click Load unpacked and select this project folder.
+4. Reload Google Calendar after you update the extension.
