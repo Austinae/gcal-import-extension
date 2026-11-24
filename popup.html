@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GCal Quick Import</title>
+    <style>
+      body {
+        width: 280px;
+        margin: 0;
+        padding: 14px 16px 16px;
+        font-family: system-ui, sans-serif;
+        font-size: 13px;
+        color: #202124;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0 0 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+      select,
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 12px;
+        font-size: 13px;
+      }
+      .hint {
+        color: #5f6368;
+        font-size: 12px;
+        line-height: 1.4;
+        margin: 0;
+      }
+      #status {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #137333;
+        min-height: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GCal Quick Import</h1>
+    <label for="importMode">After you drop a file</label>
+    <select id="importMode">
+      <option value="quick">Import in the background (default calendar)</option>
+      <option value="pick">Open Import settings to choose calendar</option>
+    </select>
+    <label for="defaultCalendarName">Default calendar name (quick mode)</label>
+    <input
+      id="defaultCalendarName"
+      type="text"
+      placeholder="Leave empty to use the page default"
+      autocomplete="off"
+    />
+    <p class="hint">
+      Drop <code>.ics</code> files on the panel in Google Calendar, or click
+      “Choose file”. Uses the same import flow as Settings → Import.
+    </p>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

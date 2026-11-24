@@ -1,0 +1,145 @@
+#gcal-import-drop-root {
+  position: fixed;
+  right: 20px;
+  bottom: 84px;
+  z-index: 2147483000;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  pointer-events: none;
+}
+
+#gcal-import-drop-panel {
+  pointer-events: auto;
+  width: 220px;
+  border-radius: 16px;
+  border: 1px dashed #1a73e8;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 28px rgba(60, 64, 67, 0.28);
+  padding: 14px 14px 12px;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+#gcal-import-drop-root.gcal-import-dragging #gcal-import-drop-panel {
+  border-color: #185abc;
+  background: rgba(232, 240, 254, 0.98);
+  transform: scale(1.02);
+}
+
+#gcal-import-drop-root.gcal-import-theme-dark #gcal-import-drop-panel {
+  background: rgba(32, 33, 36, 0.94);
+  border-color: #8ab4f8;
+  color: #e8eaed;
+}
+
+#gcal-import-drop-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#gcal-import-drop-title svg {
+  flex-shrink: 0;
+}
+
+#gcal-import-drop-hint {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: #5f6368;
+}
+
+#gcal-import-drop-root.gcal-import-theme-dark #gcal-import-drop-hint {
+  color: #9aa0a6;
+}
+
+#gcal-import-drop-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+#gcal-import-browse-btn {
+  all: unset;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a73e8;
+  padding: 4px 0;
+}
+
+#gcal-import-browse-btn:hover {
+  text-decoration: underline;
+}
+
+#gcal-import-drop-root.gcal-import-hidden {
+  display: none;
+}
+
+#gcal-import-toast {
+  pointer-events: none;
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 2147483647;
+  max-width: 420px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #fff;
+  background: #202124;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#gcal-import-toast.gcal-import-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#gcal-import-toast.gcal-import-error {
+  background: #c5221f;
+}
+
+#gcal-import-page-drop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2147482999;
+  background: rgba(26, 115, 232, 0.12);
+  border: 3px dashed #1a73e8;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#gcal-import-page-drop.gcal-import-page-drop-visible {
+  display: flex;
+}
+
+.gcal-import-page-drop-inner {
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 16px;
+  padding: 22px 28px;
+  text-align: center;
+  box-shadow: 0 10px 32px rgba(60, 64, 67, 0.25);
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  color: #202124;
+}
+
+.gcal-import-page-drop-inner strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.gcal-import-page-drop-inner span {
+  font-size: 13px;
+  color: #5f6368;
+}
