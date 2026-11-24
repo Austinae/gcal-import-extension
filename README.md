@@ -1,7 +1,5 @@
 # GCal Quick Import
 
-## Chrome Web Store
-
 The extension will be on the Chrome Web Store shortly.
 
 When the listing is live, install from here:
@@ -40,11 +38,10 @@ Open the extension from the Chrome toolbar to set the mode.
 
 GCal Quick Import runs only on calendar.google.com. It uses your browser session to run the same import that Google offers in settings. The extension does not send your files or calendar data to another service.
 
-## Install from source
+## License
 
-For local testing or contributions:
+This project uses the [MIT License](LICENSE). You may use, change, and share the code under those terms.
 
-1. Open `chrome://extensions`.
-2. Turn on Developer mode.
-3. Click Load unpacked and select this project folder.
-4. Reload Google Calendar after you update the extension.
+## Google Calendar
+
+Google Calendar is a product and trademark of Google LLC. This extension is an independent project. It is not made by, endorsed by, or sponsored by Google. You must follow [Google’s Terms of Service](https://policies.google.com/terms) when you use Google Calendar.
