@@ -48,6 +48,40 @@ We may update this policy. We will change the last updated date when we do.
 
 For privacy questions, open an issue at https://github.com/Austinae/gcal-import-extension/issues. You can also use the contact on the GitHub profile for this project.
 
+## How we use information
+
+We use calendar files only when you drop or choose a file. We use the file to run Google Calendar import. We use saved settings only to apply your import mode and default calendar name.
+
+We do not use your data for ads. We do not sell your data. No employee reads your files.
+
+## How we share information
+
+We do not share your data with other companies for their own use.
+
+Import sends data to Google only when you start import. That transfer is part of Google Calendar import. Google receives data under Google terms.
+
+## Retention
+
+Import job data in session storage is removed when import ends or when the browser session ends. Settings in Chrome sync remain until you remove them or uninstall the extension.
+
+## Security
+
+The developer does not operate a server for your files. Data moves to Google over HTTPS when you use import on calendar.google.com.
+
+## Your choices
+
+You can uninstall the extension. You can clear extension data in Chrome settings. You can change settings in the extension menu.
+
+## Chrome Web Store limited use
+
+This extension handles user data only to provide calendar file import on Google Calendar.
+
+We do not use user data for ads. We do not allow humans to read user data except where the law requires it or you ask for support in a specific case.
+
+We do not transfer user data except to Google when you use import, or where the law requires it.
+
+We use permissions only for import on calendar.google.com and for settings you choose.
+
 ## Google Calendar
 
 Google Calendar is a trademark of Google LLC. Google did not make this extension. Google does not endorse or sponsor this extension.

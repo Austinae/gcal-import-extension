@@ -36,7 +36,7 @@ Open the extension from the Chrome toolbar to set the mode.
 
 ## Privacy
 
-GCal Quick Import runs only on calendar.google.com. It uses your browser session to run the same import that Google offers in settings. The extension does not send your files or calendar data to another service.
+GCal Quick Import runs only on calendar.google.com. It uses your browser session to run the same import that Google offers in settings. The extension does not send your files or calendar data to another service. Full policy: [PRIVACY.md](PRIVACY.md).
 
 ## License
 
